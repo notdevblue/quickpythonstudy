@@ -61,4 +61,11 @@ for i in range(len(a)): # sequence 에 인덱스로 접근하려면 range(len(<s
 print(sum(range(4))) # -> 6
 
 # https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops
-# todo
+
+for n in range(2, 10):
+    for x in range(2, n):
+        if n % x == 0:
+            print(n, "equals", x, "*", n // x)
+            break
+    else: # 놀랍게도 올바른 코드..
+        print(n, "is a prime number")
